@@ -6,7 +6,7 @@
 /*   By: drtaili <drtaili@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 13:02:48 by drtaili           #+#    #+#             */
-/*   Updated: 2023/12/11 14:18:12 by drtaili          ###   ########.fr       */
+/*   Updated: 2023/12/11 15:00:33 by drtaili          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,13 @@
 #define ARRAY_HPP
 
 #include "iostream"
+
 template<typename T>
 
 class Array{
 public:
-    Array<T>(void) : _content(NULL), len_array(0){
+    Array<T>(void) : len_array(0){
+        _content = new T(0);
     }
     Array<T>(unsigned int n){
         _content = new T(n);
