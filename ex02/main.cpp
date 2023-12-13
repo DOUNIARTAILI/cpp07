@@ -15,7 +15,7 @@
 
 int main() {
     try {
-        Array<int> intArray(100);
+        Array<int> intArray(10);
         Array<double> doubleArray(5);
 
         intArray[0] = 42;
@@ -33,8 +33,21 @@ int main() {
         std::cout << "Element at index 2 in doubleArray: " << doubleArray[2] << std::endl;
         std::cout << "Element at index 3 in doubleArray: " << doubleArray[3] << std::endl;
 
-        std::cout << "Element at index 10 in intArray: " << intArray[10] << std::endl;
-
+        // std::cout << "Element at index 10 in intArray: " << intArray[10] << std::endl;
+        Array<std::string> str1 = Array<std::string>();
+        Array<std::string> str2 = Array<std::string>(3);
+        str2[0] = "i";
+        str2[1] = "love";
+        str2[2] = "you";
+        for (int i = 0; i < 3; i++){
+            std::cout << str2[i] << " ";
+        }
+        std::cout << std::endl;
+        str1 = str2;
+        for (int i = 0; i < 3; i++){
+            std::cout << str1[i] << " ";
+        }
+        std::cout << std::endl;
     } catch (const std::exception& e) {
         std::cerr << "Exception: " << e.what() << std::endl;
     }

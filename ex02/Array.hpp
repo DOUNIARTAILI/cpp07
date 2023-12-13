@@ -20,21 +20,19 @@ template<typename T>
 class Array{
 public:
     Array<T>(void) : len_array(0){
-        _content = new T(0);
+        _content = new T[0];
     }
     Array<T>(unsigned int n){
-        _content = new T(n);
-        int i = 0;
-        while (i < n){
-            _content[i] = 0;
-            i++;
+        _content = new T[n];
+        for (unsigned int i = 0; i < n; i++) {
+            _content[i] = T();
         }
         len_array = n;
     }
     Array<T>(Array<T> const & array){
         std::cout << "copy constructor called" << std::endl;
-        this->_content = new T[array.len_array];
         this->len_array = array.len_array;
+        this->_content = new T[array.len_array];
         for (int i = 0; i < array.len_array; i++) {
             _content[i] = array._content[i];
         }
@@ -43,7 +41,7 @@ public:
         if (this != &array){
             delete[] _content;
             this->len_array = array.len_array;
-            T *_content = new T[len_array];
+            this->_content = new T[len_array];
             for (int i = 0; i < len_array; i++) {
                 _content[i] = array._content[i];
             }
