@@ -15,7 +15,7 @@ SRC = main.cpp
 OBJS = $(SRC:.cpp=.o)
 
 NAME = whatever
-HEADERS = whatever.hpp 
+HEADERS = whatever.hpp Awesome.hpp
 CC = c++
 
 RM = rm -rf

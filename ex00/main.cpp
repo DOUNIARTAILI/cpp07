@@ -11,46 +11,28 @@
 /* ************************************************************************** */
 
 #include "whatever.hpp"
-
-// int main() {
-//     int int1 = 5, int2 = 10;
-//     double double1 = 3.14, double2 = 6.28;
-//     char char1 = 'a', char2 = 'd';
-
-//     std::cout << "Before swapping:" << std::endl;
-//     std::cout << "int1 = " << int1 << ", int2 = " << int2 << std::endl;
-//     std::cout << "double1 = " << double1 << ", double2 = " << double2 << std::endl;
-
-//     swap(int1, int2);
-//     swap(double1, double2);
-//     swap(char1, char2);
-
-//     std::cout << "\nAfter swapping:" << std::endl;
-//     std::cout << "int1 = " << int1 << ", int2 = " << int2 << std::endl;
-//     std::cout << "double1 = " << double1 << ", double2 = " << double2 << std::endl;
-    
-//     std::cout << "max : " <<  max(int1, int2) << std::endl;
-//     std::cout << "max : " <<  max(double1, double2) << std::endl;
-//     std::cout << "max : " <<  max(char1, char2) << std::endl;
-    
-//     std::cout << "min : " <<  min(int1, int2) << std::endl;
-//     std::cout << "min : " <<  min(double1, double2) << std::endl;
-//     std::cout << "min : " <<  min(char1, char2) << std::endl;
-//     return 0;
-// }
+#include "Awesome.hpp"
 
 int main( void ) {
-    int a = 2;
-    int b = 3;
-    ::swap( a, b );
-    std::cout << "a = " << a << ", b = " << b << std::endl;
-    std::cout << "min( a, b ) = " << ::min( a, b ) << std::endl;
-    std::cout << "max( a, b ) = " << ::max( a, b ) << std::endl;
-    std::string c = "chaine1";
-    std::string d = "chaine2";
-    ::swap(c, d);
-    std::cout << "c = " << c << ", d = " << d << std::endl;
-    std::cout << "min( c, d ) = " << ::min( c, d ) << std::endl;
-    std::cout << "max( c, d ) = " << ::max( c, d ) << std::endl;
+
+    // int a = 2;
+    // int b = 3;
+    // ::swap( a, b );
+    // std::cout << "a = " << a << ", b = " << b << std::endl;
+    // std::cout << "min( a, b ) = " << ::min( a, b ) << std::endl;
+    // std::cout << "max( a, b ) = " << ::max( a, b ) << std::endl;
+    // std::string c = "chaine1";
+    // std::string d = "chaine2";
+    // ::swap(c, d);
+    // std::cout << "c = " << c << ", d = " << d << std::endl;
+    // std::cout << "min( c, d ) = " << ::min( c, d ) << std::endl;
+    // std::cout << "max( c, d ) = " << ::max( c, d ) << std::endl;
+
+    Awesome a(2), b(4);
+    ::swap(a, b);
+    std::cout << a << " " << b << std::endl;
+    std::cout << ::max(a, b) << std::endl;
+    std::cout << ::min(a, b) << std::endl;
+
     return 0;
 }
